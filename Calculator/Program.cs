@@ -15,11 +15,11 @@ namespace Calculator
                     InputHandler.ParseInput(input, inlineResults, out var numbers, out var operators);
                     var answer = InputHandler.Count(numbers, operators);
                     Console.WriteLine(answer);
-                    break;
+                    //break;
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine('\t'+e.Message);
                 }
             }
         }
