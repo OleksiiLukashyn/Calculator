@@ -16,7 +16,7 @@ namespace CalculatorLibrary
 
             return add(a, b);
         }
-        
+
         public static T Subtract(T a, T b)
         {
             var paramA = Expression.Parameter(typeof(T), "a");

@@ -34,7 +34,7 @@ namespace CalculatorLibrary
                         {
                             if ((i >= 1 && (input[i - 1] == '*' || input[i - 1] == '/' || input[i - 1] == '+' || input[i - 1] == '-')) || i == 0)
                             {
-                                
+
                                 var listChars = ReadInput(true, out var iRes);
                                 ParseInput(listChars, iRes, out var numbers, out var operators);
                                 var res = Count(numbers, operators);
@@ -78,14 +78,15 @@ namespace CalculatorLibrary
         {
             numbers = new List<int>();
             operators = new List<char>();
-            int j = 0;
+            var j = 0;
             for (var i = 0; i < input.Count; i++)
             {
                 if (input[i] == '(')
                 {
                     numbers.Add(inlineResults[j]);
                     j++;
-                }else if (input[i] == '*' || input[i] == '/' || input[i] == '+' || input[i] == '-')
+                }
+                else if (input[i] == '*' || input[i] == '/' || input[i] == '+' || input[i] == '-')
                 {
                     operators.Add(input[i]);
                 }
